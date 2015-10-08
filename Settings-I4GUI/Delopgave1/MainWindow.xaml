@@ -5,8 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Delopgave1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Settings"
+        Width="300"
+        Height="250">
+   
     <Grid>
-        
+        <Label Content="Name"
+               Margin="12,12,0,0"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"></Label>
+        <Label Content="Age"
+               Margin="12,36,0,0"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"></Label>
+        <TextBox Name="tbxName"
+                 Text="{Binding Source={StaticResource Settings}, Path=Default.Person, Mode=OneTime}"
+                 IsReadOnly="True"
+                 VerticalAlignment="Top"
+                 HorizontalAlignment="Left"
+                 Margin="70,13,0,0"
+                 Width="150"></TextBox>
+        <TextBox Name="tbxAge"
+                 Text="{Binding Source={StaticResource Settings}, Path=Default.Age}"
+                 VerticalAlignment="Top"
+                 HorizontalAlignment="Left"
+                 Margin="70,38,0,0"
+                 Width="50"></TextBox>
+        <Button Content="Roll back"
+                Name="btnRollBack"
+                Margin="70,100,0,0"
+                VerticalAlignment="top"
+                HorizontalAlignment="Left"
+                Width="70"
+                Click="BtnRollBack_OnClick"></Button>
+        <Button Content="Reset"
+                Name="btnReset"
+                Margin="150,100,0,0"
+                VerticalAlignment="top"
+                HorizontalAlignment="Left"
+                Width="70"
+                Click="BtnReset_OnClick"></Button>
+        <Button Content="Show Path"
+                Name="btnPath"
+                Margin="70,150,0,0"
+                VerticalAlignment="top"
+                HorizontalAlignment="Left"
+                Width="70"
+                Click="BtnPath_OnClick"></Button>
+
+
     </Grid>
 </Window>
